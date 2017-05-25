@@ -9,9 +9,15 @@ let app = express();
 let PORT = process.env.PORT || 8080;
 
 
+app.use(methodOverride("_method"));
+
+app.engine("handlebars", exphbs({
+  defaultLayout: "main"
+}));
+app.set("view engine", "handlebars");
 
 
-
+let routes = require("./controllers/invoiceController.js");
 
 app.use("/", routes);
 
