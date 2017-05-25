@@ -5,9 +5,15 @@ const router = express.Router();
 
 
 router.get('/', function(req, res) {
-      res.send('INVOICE!!!!YEAH!!!!');
-    //res.render('index');
-  });
+  res.send('INVOICE!!!!YEAH!!!!');
+  //res.render('index');
+});
+
+router.get('/login', function(req, res) {
+  res.send('INVOICE!!!!YEAH!!!!');
+  //res.render('index');
+});
+
 
 
 module.exports = router;
