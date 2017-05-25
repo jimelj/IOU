@@ -5,9 +5,10 @@ const router = express.Router();
 
 
 router.get('/', function(req, res) {
-  res.send('INVOICE!!!!YEAH!!!!');
+  res.send('LOGIN!!!!YEAH!!!!');
   //res.render('index');
 });
+
 
 
 module.exports = router;

@@ -16,12 +16,13 @@ app.engine("handlebars", exphbs({
 }));
 app.set("view engine", "handlebars");
 
+let loginController = require('./controllers/loginController.js');
+let routes = require('./controllers/invoiceController.js');
 
-let routes = require("./controllers/invoiceController.js");
-
-app.use("/", routes);
+app.use('/', routes);
+app.use('/login', loginController);
 
 
 app.listen(PORT, function() {
-    console.log("App listening on PORT " + PORT);
+    console.log('App listening on PORT ' + PORT);
   });
