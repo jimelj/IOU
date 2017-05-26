@@ -8,6 +8,8 @@ let exphbs = require("express-handlebars");
 let app = express();
 let PORT = process.env.PORT || 8080;
 
+let db = require("./models");
+
 
 app.use(methodOverride("_method"));
 
@@ -22,7 +24,8 @@ let routes = require('./controllers/invoiceController.js');
 app.use('/', routes);
 app.use('/login', loginController);
 
-
-app.listen(PORT, function() {
-    console.log('App listening on PORT ' + PORT);
+db.sequelize.sync({}).then(function() {
+  app.listen(PORT, function() {
+    console.log("App listening on PORT " + PORT);
   });
+});
