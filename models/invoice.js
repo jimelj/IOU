@@ -66,7 +66,7 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     client_phone: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
         len: [1]

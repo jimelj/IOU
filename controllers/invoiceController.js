@@ -5,16 +5,13 @@ const db = require('../models');
 
 
 router.get('/', function(req, res) {
-  // res.send('INVOICE!!!!YEAH!!!!');
-  // db.burgers.findAll({}).then(function(dbBurger) {
-  //     res.render("index", {
-  //       burgers: dbBurger
-  //     });
+  res.render('index');
 
-  db.Projects.findAll({}).then(function(dbProject) {
-    res.send(dbProject);
-  });
-});
+//DO NOT TOUCH THIS!!!!
+//   db.Projects.findAll({}).then(function(dbProject) {
+//     res.send(dbProject);
+//   });
+ });
 
 
 module.exports = router;
