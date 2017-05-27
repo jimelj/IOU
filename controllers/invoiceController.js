@@ -5,7 +5,7 @@ const db = require('../models');
 
 
 router.get('/', function(req, res) {
-  res.render('index');
+  res.render('home');
 
 //DO NOT TOUCH THIS!!!!
 //   db.Projects.findAll({}).then(function(dbProject) {
