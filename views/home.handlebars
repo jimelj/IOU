@@ -1,0 +1,73 @@
+<div class="container">
+	<div class="col s12 m4 l2">
+		<div id="logo"> 
+			<img src="/assets/img/logo.PNG">
+		</div>
+		<div>
+
+			<i id = "addProject" class="large material-icons color" class="material-icons">note_add</i>
+			<h4 class = "color">Add Project</h4>
+		</div>
+<table class="highlight">
+        <thead>
+          <tr>
+              <th class = "color">Project Name</th>
+              <th class = "color">Due Date</th>
+              <th class = "color">Hours Spent</th>
+              {{!-- <th>Invoice</th>
+              <th>Delete</th>
+              <th>Complete</th> --}}
+          </tr>
+
+        </thead>
+
+        <tbody>
+      
+        </tbody>
+      </table>
+        <ul class="collapsible" data-collapsible="accordion">
+    <li>
+      <div class="collapsible-header">Project Name: {{project_name}}</div>
+      <div class="collapsible-body"><span>Description: {{description}}</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header">Second Project</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header">Third Project</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+  </ul>
+
+
+
+<script type="text/javascript">
+   {{!--  // Open --}}
+  $('.collapsible').collapsible('open', 0);
+
+  // Close
+  $('.collapsible').collapsible('close', 0);
+ // Destroy
+  $('.collapsible').collapsible('destroy');
+        
+
+
+</script>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+		
+	</div>
+</div>
+

@@ -30,3 +30,16 @@ db.sequelize.sync({}).then(function() {
     console.log("App listening on PORT " + PORT);
   });
 });
+
+// =====================================================
+//Home Page JS
+
+
+  //   // Open
+  // $('.collapsible').collapsible('open', 0);
+
+  // // Close
+  // $('.collapsible').collapsible('close', 0);
+
+  // // Destroy
+  // $('.collapsible').collapsible('destroy');
