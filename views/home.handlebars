@@ -7,13 +7,16 @@
 		<div>
 
 			<i id = "addProject" class="large material-icons color" class="material-icons">note_add</i>
-			<h4 class = "color">Add Project</h4>
+			<br>
+			 <!-- Modal Trigger -->
+  <a class="modal-trigger waves-effect waves-light btn" href="#modal1">Add Project</a>
 		</div>
+		<br>
 
 <table class="highlight">
         <thead>
           <tr>
-              <th class = "color">Project Name</th>
+              <th class = "color">Projects</th>
               <th class = "color">Due Date</th>
               <th class = "color">Hours Spent</th>
               {{!-- <th>Invoice</th>
@@ -28,14 +31,19 @@
         </tbody>
       </table>
 
-        <ul class="collapsible" data-collapsible="accordion">
+        <ul class="collapsible" data-collapsible="accordion" {{#project}}>
     <li>
-      <div class="collapsible-header">Project Name: {{project_name}}</div>
-      <div class="collapsible-body"><span>Description: {{description}}</span></div>
-      <div class="collapsible-body"><span>Hours Allocated: {{hours_allocated}}</span></div>
-      <div class="collapsible-body"><span>Hourly Rate: {{hourly_rate}}</span></div>
+      <div class="collapsible-header">Project Name: {{this.project_name}}</div>
+      <div class="collapsible-body"><span>Description: {{this.description}}</span></div>
+      <div class="collapsible-body"><span>Due Date: {{this.hours_allocated}}</span></div>
+      <div class="collapsible-body"><span>Hourly Rate: {{this.hourly_rate}}</span></div>
+      <div class="collapsible-body"><span>Client Name: {{this.client_name}}</span></div>
+      <div class="collapsible-body"><span>Client Address: {{this.client_address}}</span></div>
+      <div class="collapsible-body"><span>Client Email: {{this.client_email}}</span></div>
+      <div class="collapsible-body"><span>Client Phone: {{this.client_phone}}</span></div>
+      <div class="collapsible-body"><span>Notes: {{this.notes}}</span></div>
     </li>
-    
+    <li>
       <div class="collapsible-header">Second Project</div>
       <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
     </li>
@@ -43,57 +51,81 @@
       <div class="collapsible-header">Third Project</div>
       <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
     </li>
-  </ul>
+  </ul {{/projects}}>
 
-{{!-- Add Project Input Form --}}
-<div id="project_form">
-<div class="row">
-    <form class="col s6">
-      <div class="row">
-        <div class="input-field col s6">
-          <input {{!-- placeholder="Placeholder"  --}}id="project_name" type="text" class="validate">
-          <label for="project_name">Project Name: </label>
-        </div>
-        <div class="input-field col s6">
-          <input {{!-- placeholder="Placeholder" --}} id="description" type="text" class="validate">
-          <label for="Description">Description: </label>
-        </div>
-          <div class="row">
-        <div class="input-field col s6">
-           <input {{!-- placeholder="Placeholder"  --}}id="hours_allocated" type="text" class="validate">
-           <label for="project_name">Hours Allocated: : </label>
-          
-        </div>
-      </div>
-        <div class="row">
-        <div class="input-field col s6">
-          <input {{!-- placeholder="Placeholder"  --}}id="hourly_rate" type="text" class="validate">
-          <label for="project_name">Hourly Rate: : </label>
-        </div>
-      </div>
-     
-        </div>
-      </div>
-    </form>
-  </div>
-</div>
 
-{{!-- Modal for Project Form --}}
-  <!-- Modal Trigger -->
-  <a class="waves-effect waves-light btn" href="#modal1">Modal</a>
 
   <!-- Modal Structure -->
-  <!-- Modal Trigger -->
-  <button data-target="modal1" class="btn">Modal</button>
-  <div id="modal1" class="modal bottom-sheet">
+  <div id="modal1" class="modal modal-fixed-footer">
     <div class="modal-content">
-      <h4>Modal Header</h4>
-      <p>A bunch of text</p>
+      <h4>New Project</h4>
+      <div class="row">
+    <form action="/" method="POST" class="col s12">
+    <div class="row">
+        <div class="input-field col s12">
+          <input id="project_name" type="text" class="validate">
+          <label for="project_name">Project Name: </label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="description" type="text" class="validate">
+          <label for="description">Description: </label>
+        </div>
+      </div>
+
+            <div class="row">
+        <div class="input-field col s6">
+          <input id="due_date" type="text" class="validate">
+          <label for="due_date">Due Date: </label>
+        </div>
+        <div class="input-field col s6">
+          <input id="hourly_rate" type="text" class="validate">
+          <label for="hourly_rate">Hourly Rate: </label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="client_name" type="text" class="validate">
+          <label for="client_name">Client Name</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="client_address" type="text" class="validate">
+          <label for="client_address">Client Address</label>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="client_phone" type="text" class="validate">
+          <label for="client_phone">Client Phone</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="client_email" type="text" class="validate">
+          <label for="client_email">Client Email</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="notes" type="text" class="validate">
+          <label for="notes">Notes: </label>
+        </div>
+      </div>
+          <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Submit</a>
     </div>
-    <div class="modal-footer">
-      <a  href="modal1" class="modal-action modal-close waves-effect waves-green btn-flat modal-trigger">Agree</a>
-    </div>
+    </form>
   </div>
+     
+    </div>
+
+    {{!--  <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Cancel</a>
+    </div> --}}
+  </div>
+ 
+
+
 
 
 

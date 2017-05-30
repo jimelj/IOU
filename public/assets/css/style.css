@@ -6,4 +6,7 @@ body {
 	color: white;
 }
 
-use classes dont use iDS for that
+.collapsible-body {
+color: white;
+
+}
