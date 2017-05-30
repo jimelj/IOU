@@ -1,8 +1,7 @@
 ### Schema
-
 CREATE DATABASE IOU_DB;
-
 USE IOU_DB;
+<<<<<<< Updated upstream
 
 -- CREATE TABLE projects
 -- (
@@ -15,3 +14,5 @@ USE IOU_DB;
 -- 	notes TEXT(255),
 -- 	PRIMARY KEY (id)
 -- );
+=======
+>>>>>>> Stashed changes
