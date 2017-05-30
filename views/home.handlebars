@@ -16,7 +16,7 @@
 <table class="highlight">
         <thead>
           <tr>
-              <th class = "color">Project Name</th>
+              <th class = "color">Projects</th>
               <th class = "color">Due Date</th>
               <th class = "color">Hours Spent</th>
               {{!-- <th>Invoice</th>
@@ -31,17 +31,17 @@
         </tbody>
       </table>
 
-        <ul class="collapsible" data-collapsible="accordion">
+        <ul class="collapsible" data-collapsible="accordion" {{#project}}>
     <li>
-      <div class="collapsible-header">Project Name: {{project_name}}</div>
-      <div class="collapsible-body"><span>Description: {{description}}</span></div>
-      <div class="collapsible-body"><span>Due Date: {{hours_allocated}}</span></div>
-      <div class="collapsible-body"><span>Hourly Rate: {{hourly_rate}}</span></div>
-      <div class="collapsible-body"><span>Client Name: {{client_name}}</span></div>
-      <div class="collapsible-body"><span>Client Address: {{client_address}}</span></div>
-      <div class="collapsible-body"><span>Client Email: {{client_email}}</span></div>
-      <div class="collapsible-body"><span>Client Phone: {{client_phone}}</span></div>
-      <div class="collapsible-body"><span>Notes: {{notes}}</span></div>
+      <div class="collapsible-header">Project Name: {{this.project_name}}</div>
+      <div class="collapsible-body"><span>Description: {{this.description}}</span></div>
+      <div class="collapsible-body"><span>Due Date: {{this.hours_allocated}}</span></div>
+      <div class="collapsible-body"><span>Hourly Rate: {{this.hourly_rate}}</span></div>
+      <div class="collapsible-body"><span>Client Name: {{this.client_name}}</span></div>
+      <div class="collapsible-body"><span>Client Address: {{this.client_address}}</span></div>
+      <div class="collapsible-body"><span>Client Email: {{this.client_email}}</span></div>
+      <div class="collapsible-body"><span>Client Phone: {{this.client_phone}}</span></div>
+      <div class="collapsible-body"><span>Notes: {{this.notes}}</span></div>
     </li>
     <li>
       <div class="collapsible-header">Second Project</div>
@@ -51,7 +51,7 @@
       <div class="collapsible-header">Third Project</div>
       <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
     </li>
-  </ul>
+  </ul {{/projects}}>
 
 
 
@@ -60,7 +60,7 @@
     <div class="modal-content">
       <h4>New Project</h4>
       <div class="row">
-    <form class="col s12">
+    <form action="/" method="POST" class="col s12">
     <div class="row">
         <div class="input-field col s12">
           <input id="project_name" type="text" class="validate">
@@ -111,14 +111,14 @@
           <label for="notes">Notes: </label>
         </div>
       </div>
-      
+          <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Submit</a>
+    </div>
     </form>
   </div>
      
     </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Submit</a>
-    </div>
+
     {{!--  <div class="modal-footer">
       <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Cancel</a>
     </div> --}}
