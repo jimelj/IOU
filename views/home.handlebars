@@ -1,0 +1,103 @@
+<div class="container">
+	<div class="col s12 m4 l2">
+		<div id="logo"> 
+			<img src="/assets/img/logo.PNG">
+		</div>
+		
+		<div>
+
+			<i id = "addProject" class="large material-icons color" class="material-icons">note_add</i>
+			<h4 class = "color">Add Project</h4>
+		</div>
+
+<table class="highlight">
+        <thead>
+          <tr>
+              <th class = "color">Project Name</th>
+              <th class = "color">Due Date</th>
+              <th class = "color">Hours Spent</th>
+              {{!-- <th>Invoice</th>
+              <th>Delete</th>
+              <th>Complete</th> --}}
+          </tr>
+
+        </thead>
+
+        <tbody>
+      
+        </tbody>
+      </table>
+
+        <ul class="collapsible" data-collapsible="accordion">
+    <li>
+      <div class="collapsible-header">Project Name: {{project_name}}</div>
+      <div class="collapsible-body"><span>Description: {{description}}</span></div>
+      <div class="collapsible-body"><span>Hours Allocated: {{hours_allocated}}</span></div>
+      <div class="collapsible-body"><span>Hourly Rate: {{hourly_rate}}</span></div>
+    </li>
+    
+      <div class="collapsible-header">Second Project</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header">Third Project</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+  </ul>
+
+{{!-- Add Project Input Form --}}
+<div id="project_form">
+<div class="row">
+    <form class="col s6">
+      <div class="row">
+        <div class="input-field col s6">
+          <input {{!-- placeholder="Placeholder"  --}}id="project_name" type="text" class="validate">
+          <label for="project_name">Project Name: </label>
+        </div>
+        <div class="input-field col s6">
+          <input {{!-- placeholder="Placeholder" --}} id="description" type="text" class="validate">
+          <label for="Description">Description: </label>
+        </div>
+          <div class="row">
+        <div class="input-field col s6">
+           <input {{!-- placeholder="Placeholder"  --}}id="hours_allocated" type="text" class="validate">
+           <label for="project_name">Hours Allocated: : </label>
+          
+        </div>
+      </div>
+        <div class="row">
+        <div class="input-field col s6">
+          <input {{!-- placeholder="Placeholder"  --}}id="hourly_rate" type="text" class="validate">
+          <label for="project_name">Hourly Rate: : </label>
+        </div>
+      </div>
+     
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+{{!-- Modal for Project Form --}}
+  <!-- Modal Trigger -->
+  <a class="waves-effect waves-light btn" href="#modal1">Modal</a>
+
+  <!-- Modal Structure -->
+  <!-- Modal Trigger -->
+  <button data-target="modal1" class="btn">Modal</button>
+  <div id="modal1" class="modal bottom-sheet">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+      <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+      <a  href="modal1" class="modal-action modal-close waves-effect waves-green btn-flat modal-trigger">Agree</a>
+    </div>
+  </div>
+
+
+
+	
+	</div>
+</div>
+

@@ -10,6 +10,7 @@ let PORT = process.env.PORT || 8080;
 
 let db = require("./models");
 
+app.use(express.static(process.cwd() + "/public"));
 
 app.use(methodOverride("_method"));
 
@@ -29,3 +30,5 @@ db.sequelize.sync({}).then(function() {
     console.log("App listening on PORT " + PORT);
   });
 });
+
+// =====================================================
