@@ -25,17 +25,11 @@ module.exports = function(sequelize, DataTypes) {
     },
     start_time: {
       type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [1]
-      }
+
     },
     end_time: {
       type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [1]
-      }
+
     },
     hourly_rate: {
       type: DataTypes.INTEGER,
@@ -66,7 +60,7 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     client_phone: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1]
@@ -74,7 +68,7 @@ module.exports = function(sequelize, DataTypes) {
     },
     notes: {
       type: DataTypes.TEXT,
-      allowNull: false,
+      allowNull: true,
       validate: {
         len: [1]
       }

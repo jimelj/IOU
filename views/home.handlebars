@@ -1,9 +1,9 @@
 <div class="container">
 	<div class="col s12 m4 l2">
-		<div id="logo"> 
+		<div id="logo">
 			<img src="/assets/img/logo.PNG">
 		</div>
-		
+
 		<div>
 
 			<i id = "addProject" class="large material-icons color" class="material-icons">note_add</i>
@@ -27,7 +27,7 @@
         </thead>
 
         <tbody>
-      
+
         </tbody>
       </table>
 
@@ -51,7 +51,7 @@
       <div class="collapsible-header">Third Project</div>
       <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
     </li>
-  </ul {{/projects}}>
+  </ul {{/project}}>
 
 
 
@@ -60,76 +60,75 @@
     <div class="modal-content">
       <h4>New Project</h4>
       <div class="row">
-    <form action="/" method="POST" class="col s12">
+    <form id="form1" action="/" method="POST" class="col s12">
     <div class="row">
         <div class="input-field col s12">
-          <input id="project_name" type="text" class="validate">
+          <input id="project_name" name="project_name" type="text" class="validate">
           <label for="project_name">Project Name: </label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input id="description" type="text" class="validate">
+          <input id="description" name="description" type="text" class="validate">
           <label for="description">Description: </label>
         </div>
       </div>
 
             <div class="row">
         <div class="input-field col s6">
-          <input id="due_date" type="text" class="validate">
+          <input id="due_date" name="due_date" type="text" class="validate">
           <label for="due_date">Due Date: </label>
         </div>
         <div class="input-field col s6">
-          <input id="hourly_rate" type="text" class="validate">
+          <input id="hourly_rate" name="hourly_rate" type="text" class="validate">
           <label for="hourly_rate">Hourly Rate: </label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s6">
-          <input id="client_name" type="text" class="validate">
+          <input id="client_name" name="client_name" type="text" class="validate">
           <label for="client_name">Client Name</label>
         </div>
         <div class="input-field col s6">
-          <input id="client_address" type="text" class="validate">
+          <input id="client_address" name="client_address" type="text" class="validate">
           <label for="client_address">Client Address</label>
         </div>
       </div>
-      
+
       <div class="row">
         <div class="input-field col s6">
-          <input id="client_phone" type="text" class="validate">
+          <input id="client_phone" name="client_phone" type="text" class="validate">
           <label for="client_phone">Client Phone</label>
         </div>
         <div class="input-field col s6">
-          <input id="client_email" type="text" class="validate">
+          <input id="client_email" name="client_email" type="text" class="validate">
           <label for="client_email">Client Email</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input id="notes" type="text" class="validate">
+          <input id="notes" name="notes" type="text" class="validate">
           <label for="notes">Notes: </label>
         </div>
       </div>
           <div class="modal-footer">
-      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Submit</a>
+      <button type="submit" class="modal-action modal-close waves-effect waves-green btn-flat " form="form1">Submit</button>
     </div>
     </form>
   </div>
-     
+
     </div>
 
     {{!--  <div class="modal-footer">
       <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Cancel</a>
     </div> --}}
   </div>
- 
 
 
 
 
 
-	
+
+
 	</div>
 </div>
-
