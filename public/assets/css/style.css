@@ -10,3 +10,9 @@ body {
 color: white;
 
 }
+
+#logo {
+	text-align: center;
+	/*margin-bottom: 50px;
+	padding-bottom: 50px;*/
+}

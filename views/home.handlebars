@@ -6,13 +6,13 @@
 
 		<div>
 
-			<i id = "addProject" class="large material-icons color" class="material-icons">note_add</i>
+			<i class="large material-icons color" class="material-icons">note_add</i>
 			<br>
 			 <!-- Modal Trigger -->
   <a class="modal-trigger waves-effect waves-light btn" href="#modal1">Add Project</a>
 		</div>
 		<br>
-
+    <br>
 <table class="highlight">
         <thead>
           <tr>
@@ -30,10 +30,11 @@
 
         </tbody>
       </table>
-
-        <ul class="collapsible" data-collapsible="accordion" {{#project}}>
+  {{#each project}}>
+        <ul class="collapsible" data-collapsible="accordion">
     <li>
-      <div class="collapsible-header">Project Name: {{this.project_name}}</div>
+      <div class="collapsible-header">Project Name:
+      {{this.project_name}}</div>
       <div class="collapsible-body"><span>Description: {{this.description}}</span></div>
       <div class="collapsible-body"><span>Due Date: {{this.hours_allocated}}</span></div>
       <div class="collapsible-body"><span>Hourly Rate: {{this.hourly_rate}}</span></div>
@@ -51,7 +52,8 @@
       <div class="collapsible-header">Third Project</div>
       <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
     </li>
-  </ul {{/project}}>
+  </ul {{/each}}>
+
 
 
 
@@ -86,6 +88,7 @@
       </div>
       <div class="row">
         <div class="input-field col s6">
+
           <input id="client_name" name="client_name" type="text" class="validate">
           <label for="client_name">Client Name</label>
         </div>
@@ -130,5 +133,7 @@
 
 
 
+
 	</div>
+
 </div>
