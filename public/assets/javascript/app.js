@@ -9,6 +9,16 @@ $('.collapsible').collapsible('destroy');
 
 //add project functionality for icon (home page)
 
-$("#addProject").click(function() {
-       console.log("The paragraph was clicked.");
-});
+  
+
+$(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal').modal();
+  });
+
+
+  // $("#addProject").click(function() {
+
+  // 	$("#modal1").
+
+  // });

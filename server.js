@@ -12,6 +12,12 @@ let db = require("./models");
 
 app.use(express.static(process.cwd() + "/public"));
 
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }));
+
+// parse application/json
+app.use(bodyParser.json());
+
 app.use(methodOverride("_method"));
 
 app.engine("handlebars", exphbs({
