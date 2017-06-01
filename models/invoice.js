@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 /*jshint esversion:6*/
 module.exports = function(sequelize, DataTypes) {
   let Project = sequelize.define('Projects', {
@@ -76,3 +77,37 @@ module.exports = function(sequelize, DataTypes) {
   });
 return Project;
 };
+=======
+// module.exports = function(sequelize, DataTypes) {
+//   var IOU_DB = sequelize.define("project", {
+//     id: {
+//        type: DataTypes.INT,
+//        allowNull: false
+//        },
+//
+//    project_name: {
+//       type: DataTypes.STRING,
+//       allowNull: false
+//       },
+//
+//     project_description: {
+//       type: DataTypes.STRING,
+//       allowNull: false
+//       },
+//
+//   });
+//   return burger;
+// };
+//
+// -- CREATE TABLE projects
+// -- (
+// -- 	id int NOT NULL AUTO_INCREMENT,
+// -- 	project_name VARCHAR(255) NOT NULL,
+// --   project_description VARCHAR(255) NOT NULL,
+// -- 	pay_rate INT(255) NOT NULL,
+// -- 	allocated_time INT(255),
+// --   deadline TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+// -- 	notes TEXT(255),
+// -- 	PRIMARY KEY (id)
+// -- );
+>>>>>>> Stashed changes
