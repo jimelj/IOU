@@ -19,7 +19,7 @@ router.get("/login", function(req, res) {
    if (req.user) {
      res.redirect('/home');
    }
-   res.render('/login');
+   res.render('login');
  });
 
 router.get('/home', isAuthenticated, function(req, res) {
