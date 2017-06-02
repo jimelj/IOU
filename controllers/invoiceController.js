@@ -23,6 +23,7 @@ router.get("/login", function(req, res) {
  });
 
 router.get('/home', isAuthenticated, function(req, res) {
+
 //DO NOT TOUCH THIS!!!!
   db.Projects.findAll({}).then(function(dbProject) {
     res.render('home', {
@@ -47,8 +48,6 @@ router.get('/home', isAuthenticated, function(req, res) {
      res.redirect("/home");
    });
  });
-
-
 
 
 
