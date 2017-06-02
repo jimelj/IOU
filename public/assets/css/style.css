@@ -1,18 +1,81 @@
-body {
-	background-color: #662d91;
+/* Custom Stylesheet */
+
+
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By Danel Roldan.com
+ */
+
+nav ul a, nav .brand-logo {
+  color: #444;
 }
 
-.color {
-	color: white;
+p {
+  line-height: 2rem;
 }
 
-.collapsible-body {
-color: white;
-
+.button-collapse {
+  color: #26a69a;
 }
 
-#logo {
-	text-align: center;
-	/*margin-bottom: 50px;
-	padding-bottom: 50px;*/
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255, 255, 255, .9);
+}
+
+.parallax-container .section {
+  width: 100%;
+}
+
+@media only screen and (max-width: 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+
+.logo {
+  height: 126px;
+  background-image: url(../img/logo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 25%;
+  margin-top: 110px;
+}
+
+h1 {
+  font-weight: 100;
+  margin-top: 150px;
+}
+
+.modal {
+  /* increase the height and width as you desire */
+  width: 25% !important;
+  height: 50% !important;
+  background-color: red;
 }
