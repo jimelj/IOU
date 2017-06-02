@@ -4,6 +4,8 @@ let bodyParser = require('body-parser');
 let path = require('path');
 let methodOverride = require("method-override");
 let exphbs = require("express-handlebars");
+let session = require("express-session");
+let passport = require("./config/passport");
 
 let app = express();
 let PORT = process.env.PORT || 8080;
@@ -25,16 +27,19 @@ app.engine("handlebars", exphbs({
 }));
 app.set("view engine", "handlebars");
 
+// We need to use sessions to keep track of our user's login status
+app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
+app.use(passport.initialize());
+app.use(passport.session());
+
 let loginController = require('./controllers/loginController.js');
 let routes = require('./controllers/invoiceController.js');
 
 app.use('/', routes);
-app.use('/login', loginController);
+app.use('/passport', loginController);
 
 db.sequelize.sync({}).then(function() {
   app.listen(PORT, function() {
-    console.log("App listening on PORT " + PORT);
+    console.log("==== 🌎 🚈 🖥️ 📡===> App listening on PORT " + PORT + ' ✅');
   });
 });
-
-// =====================================================
