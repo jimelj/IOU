@@ -5,7 +5,7 @@ const db = require('../models');
 
 
 
-router.get('/', function(req, res) {
+router.get('/home', function(req, res) {
 //DO NOT TOUCH THIS!!!!
   db.Projects.findAll({}).then(function(dbProject) {
     res.render('home', {
@@ -14,7 +14,7 @@ router.get('/', function(req, res) {
   });
  });
 
- router.post("/", function(req, res) {
+ router.post("/home", function(req, res) {
    let {project_name,description,due_date,hourly_rate,client_name,client_address,client_email,client_phone,notes}= req.body;
    db.Projects.create({
      project_name: project_name,
@@ -30,5 +30,16 @@ router.get('/', function(req, res) {
      res.redirect("/");
    });
  });
+
+router.get('/registration', function(req, res) {
+//DO NOT TOUCH THIS!!!!
+  res.render('registration')
+ });
+
+router.get('/login', function(req, res) {
+//DO NOT TOUCH THIS!!!!
+  res.render('login')
+ });
+
 
 module.exports = router;
