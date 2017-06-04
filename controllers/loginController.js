@@ -5,10 +5,10 @@ const router = express.Router();
 const db = require("../models");
 const passport = require("../config/passport");
 
-router.get('/', function(req, res) {
-  res.send('LOGIN!!!!YEAH!!!!');
-  //res.render('index');
-});
+// router.get('/', function(req, res) {
+//   res.send('LOGIN!!!!YEAH!!!!');
+//   //res.render('index');
+// });
 
 // Requiring our models and passport as we've configured it
 
