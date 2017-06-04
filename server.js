@@ -33,9 +33,9 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 let loginController = require('./controllers/loginController.js');
-let routes = require('./controllers/invoiceController.js');
+let invoiceController = require('./controllers/invoiceController.js');
 
-app.use('/', routes);
+app.use('/', invoiceController);
 app.use('/passport', loginController);
 
 db.sequelize.sync({}).then(function() {
