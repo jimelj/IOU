@@ -11,7 +11,7 @@ router.get("/", function(req, res) {
   if (req.user) {
     res.redirect('/home');
   } else {
-    res.render('registration');
+    res.render('index');
   }
 });
 
@@ -20,7 +20,7 @@ router.get("/login", function(req, res) {
   if (req.user) {
     res.redirect('/home');
   } else {
-    res.render('login');
+    res.render('index');
   }
 });
 
