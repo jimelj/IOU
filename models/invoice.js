@@ -72,7 +72,11 @@ module.exports = function(sequelize, DataTypes) {
       validate: {
         len: [1]
       }
-    }
+    },
+    done: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false,
+      }
   });
 return Project;
 };
