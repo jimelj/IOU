@@ -1,200 +1,142 @@
-{{!-- <div id="index-banner" class="parallax-container">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <br><br>
-        <div class="logo col s12 m6"></div>
-        <h1 class="header center teal-text text-lighten-2"></h1>
-      </div>
-    </div>
-    <div class="parallax"><img src="_assets/img/background1.jpg" alt="Unsplashed background img 1"></div>
-  </div>
-
-  <div class="container">
-    <div class="section card">
-      <!--   Form Section   -->
-      <div class="row">
-        <div class="col s6 offset-m3">
-          <form id="home" action="/home" method="POST" class="col s12">
-            <div class="row">
-              <div class="input-field col s12">
-                <i class="material-icons prefix">work</i>
-                <input id="group-name" type="text" class="validate">
-                <label for="group-name">Add A Group Name</label>
-              </div>
-            </div>
-            <div class="row">
-              <div class="input-field col s12">
-                <i class="material-icons prefix">description</i>
-                <input id="working-on" type="text" class="validate">
-                <label for="working-on">What are you working on?</label>
-              </div>
-            </div>
-            <div class="row">
-              <div class="input-field col s12">
-                <i class="material-icons prefix">schedule</i>
-                <input id="hourly-wage" type="text" class="validate">
-                <label for="hourly-wage">Hourly wage (optional)</label>
-              </div>
-            </div>
-            <div class="row">
-              <div class="input-field col s12">
-                <i class="material-icons prefix">mode_edit</i>
-                <textarea id="project-notes" class="materialize-textarea"></textarea>
-                <label for="project-notes">Project Notes (optional)</label>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col s6 offset-m3">
-                <a class="waves-effect waves-light btn-large"><i class="tiny material-icons right">done</i>Create Project</a>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
+<div id="index-banner" class="parallax-container">
+  <div class="section no-pad-bot">
+    <div class="container">
+      <br><br>
+      <div class="logo col s12 m6"></div>
+      <h1 class="header center teal-text text-lighten-2"></h1>
     </div>
   </div>
-
- --}}
-
-
-
-{{!-- ============================================================== --}}
-  <div class="container">
-  <div class="col s12 m4 l2">
-
-    <div id="logo">
-      <img src="/assets/img/logo.PNG">
-    </div>
-
-    <div>
-
-      <i class="large material-icons color" class="material-icons">note_add</i>
-      <br>
-       <!-- Modal Trigger -->
-  <a class="modal-trigger waves-effect waves-light btn" href="#modal1">Add Project</a>
-    </div>
-    <br>
-    <br>
-    <h4 class="color">Projects</h4>
-        
-       
-     
-  
-        <ul class="collapsible" data-collapsible="accordion">
-        {{#each projects}}
-    <li>
-      <div class="collapsible-header project_name">Project Name: {{this.project_name}}</div>
-      <div class="collapsible-body">
-      <span class="tags">Description:  {{this.description}}</span>
-      <br>
-      <br>
-      <span class="tags">Due Date:  {{this.due_date}}</span>
-      <br>
-      <br>
-      <span class="tags">Hourly Rate:  {{this.hourly_rate}}</span>
-      <br>
-      <br>
-      <span class="tags">Client Name:  {{this.client_name}}</span>
-      <br>
-      <br>
-      <span class="tags">Client Address:  {{this.client_address}}</span>
-      <br>
-      <br>
-      <span class="tags">Client Email:  {{this.client_email}}</span>
-      <br>
-      <br>
-      <span class="tags">Client Phone:  {{this.client_phone}}</span>
-      <br>
-      <br>
-      <span class="tags">Notes:  {{this.notes}}</span>
-      </div>
-    </li>
-    {{/each}}
-
-  </ul>
-
-
-
-
-  <!-- Modal Structure -->
-  <div id="modal1" class="modal modal-fixed-footer">
-    <div class="modal-content">
-      <h4>New Project</h4>
-      <div class="row">
-    <form id="home" action="/home" method="POST" class="col s12">
+  <div class="parallax"><img src="assets/img/background1.jpg" alt="Unsplashed background img 1"></div>
+</div>
+<div class="container">
+  <div class="section card">
+    <!--   Form Section   -->
     <div class="row">
-        <div class="input-field col s12">
-          <input id="project_name" name="project_name" type="text" class="validate">
-          <label for="project_name">Project Name: </label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="description" name="description" type="text" class="validate">
-          <label for="description">Description: </label>
-        </div>
-      </div>
+      <div class="col s6 offset-m3">
 
-            <div class="row">
-        <div class="input-field col s6">
-          <input id="due_date" name="due_date" type="text" class="validate">
-          <label for="due_date">Due Date: </label>
-        </div>
-        <div class="input-field col s6">
-          <input id="hourly_rate" name="hourly_rate" type="text" class="validate">
-          <label for="hourly_rate">Hourly Rate: </label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s6">
+          <div class="row">
+            <div class="input-field col s12">
 
-          <input id="client_name" name="client_name" type="text" class="validate">
-          <label for="client_name">Client Name</label>
-        </div>
-        <div class="input-field col s6">
-          <input id="client_address" name="client_address" type="text" class="validate">
-          <label for="client_address">Client Address</label>
-        </div>
-      </div>
 
-      <div class="row">
-        <div class="input-field col s6">
-          <input id="client_phone" name="client_phone" type="text" class="validate">
-          <label for="client_phone">Client Phone</label>
-        </div>
-        <div class="input-field col s6">
-          <input id="client_email" name="client_email" type="text" class="validate">
-          <label for="client_email">Client Email</label>
-        </div>
-      
-      <div class="row">
-        <div class="input-field col s12">
-        <i class="material-icons prefix">mode_edit</i>
-          <input id="notes" name="notes" type="text" class="validate">
-          <label for="notes">Notes: </label>
-        </div>
-      </div>
-          <div class="modal-footer">
-      <button type="submit" class="modal-action modal-close waves-effect waves-green btn-flat " form="form1">Submit</button>
-    </div>
-    </form>
-  </div>
+            </div>
 
-    </div>
+            
 
-    {{!--  <div class="modal-footer">
+            <!-- Modal Trigger -->
+            <a class="modal-trigger waves-effect waves-light btn" href="#modal1">Add Project</a>
+          </div>
+          <br>
+          <br>
+          <h4 class="color">Projects</h4>
+
+
+
+
+          <ul class="collapsible" data-collapsible="accordion">
+            {{#each projects}}
+              <li>
+                <div class="collapsible-header project_name">Project Name: {{this.project_name}}</div>
+                <div class="collapsible-body">
+                  <span class="tags">Description:  {{this.description}}</span>
+                  <br>
+                  <br>
+                  <span class="tags">Due Date:  {{this.due_date}}</span>
+                  <br>
+                  <br>
+                  <span class="tags">Hourly Rate:  {{this.hourly_rate}}</span>
+                  <br>
+                  <br>
+                  <span class="tags">Client Name:  {{this.client_name}}</span>
+                  <br>
+                  <br>
+                  <span class="tags">Client Address:  {{this.client_address}}</span>
+                  <br>
+                  <br>
+                  <span class="tags">Client Email:  {{this.client_email}}</span>
+                  <br>
+                  <br>
+                  <span class="tags">Client Phone:  {{this.client_phone}}</span>
+                  <br>
+                  <br>
+                  <span class="tags">Notes:  {{this.notes}}</span>
+                </div>
+              </li>
+            {{/each}}
+          </ul>
+          <!-- Modal Structure -->
+          <div id="modal1"  class="modal modal-fixed-footer">
+            <div class="modal-content">
+              <h4>New Project</h4>
+              <div class="row">
+                <form id="home" action="/home" method="POST" class="col s12">
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input id="project_name" name="project_name" type="text" class="validate">
+                      <label for="project_name">Project Name: </label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input id="description" name="description" type="text" class="validate">
+                      <label for="description">Description: </label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s6">
+                      <input id="due_date" name="due_date" type="text" class="validate">
+                      <label for="due_date">Due Date: </label>
+                    </div>
+                    <div class="input-field col s6">
+                      <input id="hourly_rate" name="hourly_rate" type="text" class="validate">
+                      <label for="hourly_rate">Hourly Rate: </label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s6">
+                      <input id="client_name" name="client_name" type="text" class="validate">
+                      <label for="client_name">Client Name</label>
+                    </div>
+                    <div class="input-field col s6">
+                      <input id="client_address" name="client_address" type="text" class="validate">
+                      <label for="client_address">Client Address</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s6">
+                      <input id="client_phone" name="client_phone" type="text" class="validate">
+                      <label for="client_phone">Client Phone</label>
+                    </div>
+                    <div class="input-field col s6">
+                      <input id="client_email" name="client_email" type="text" class="validate">
+                      <label for="client_email">Client Email</label>
+                    </div>
+
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <i class="material-icons prefix">mode_edit</i>
+                        <input id="notes" name="notes" type="text" class="validate">
+                        <label for="notes">Notes: </label>
+                      </div>
+                    </div>
+
+
+
+                </div>
+                {{!--     <div class="modal-footer">
       <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Cancel</a>
     </div> --}}
-  </div>
+
+              </div>
+
+            </div>
+            <div class="modal-footer">
+              <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+  <i class="material-icons right">send</i>
+  </button>
+            </div>
+            </form>
 
 
-
-
-
-
-
-
-  </div>
-
+          </div>
+</div>
 </div>

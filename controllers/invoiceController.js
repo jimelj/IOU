@@ -34,7 +34,9 @@ router.get('/home', isAuthenticated, function(req, res) {
   });
 });
 
-router.post("/home", isAuthenticated, function(req, res) {
+router.post("/home", function(req, res) {
+  console.log('req.body');
+  console.log('i am here blah!');
   let {
     project_name,
     description,
